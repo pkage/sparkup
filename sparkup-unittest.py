@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import sys
 import sparkup
@@ -142,7 +142,8 @@ class SparkupTest:
         failures = 0
 
         print("Test results:")
-        for name, case in self.cases.iteritems():
+        for name in self.cases:
+            case = self.cases[name]
             try:
                 options_key = case['options']
             except:
